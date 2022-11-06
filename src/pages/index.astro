@@ -1,4 +1,5 @@
 ---
+import Landing from "../components/Landing.astro";
 ---
 
 <html lang="en">
@@ -9,6 +10,11 @@
     <meta name="generator" content={Astro.generator} />
 
     <title>Boston Brewing Co.</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css"
+    />
 
     <link rel="stylesheet" href="https://use.typekit.net/gbw2iav.css" />
   </head>
@@ -21,38 +27,34 @@
     </header>
 
     <!-- Landing Hero Section -->
-    <div class="boston">
-      <h1>Boston Brewing Co.</h1>
-      <img src="images/BostonBlack.png" />
-      <img src="images/BostonAfterglosse.png" />
-      <img src="images/BostonPeaceful.png" />
-    </div>
+    <Landing />
+    <!-- Done as component under landing -->
 
     <!-- About Us Section -->
-    <div class="about">
-      <h1>About Us</h1>
+    <div class="about section">
+      <h2>About Us</h2>
       <img src="images/BostonBlack.png" />
     </div>
 
     <!-- Season's Special Section-->
-    <div class="special">
-      <h1>Season's Special</h1>
+    <div class="special section">
+      <h2>Season's Special</h2>
       <img src="images/BostonSummer.png" />
     </div>
 
     <!-- Our Process -->
-    <div class="process">
-      <h1>Our Process</h1>
+    <div class="process section">
+      <h2>Our Process</h2>
       <img src="images/BostonBlack.png" />
     </div>
 
     <!-- Locations -->
-    <div class="locations">
-      <h1>Locations</h1>
+    <div class="locations section">
+      <h2>Locations</h2>
       <img src="images/BostonDenmark.webp" class="denmark" />
-      <h2>Denmark</h2>
+      <h3>Denmark</h3>
       <img src="images/BostonVic.jpeg" class="vicpark" />
-      <h2>Victoria Park</h2>
+      <h3>Victoria Park</h3>
     </div>
     <style>
       body {
@@ -60,17 +62,30 @@
         font-family: articulat-heavy-cf, sans-serif;
         font-weight: 900;
         font-style: normal;
+        margin: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      .section {
+        height: 100vh;
+        position: relative;
+        width: 100%;
       }
 
       /* Top Header Section */
 
       .tophead {
-        background-color: #e49472;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        padding: 10px 10px;
+        padding: 16px 16px;
+        z-index: 50;
 
         display: flex;
         flex-direction: row;
@@ -82,13 +97,13 @@
       }
 
       .menu {
-        width: 40px;
-        padding-left: 260px;
+        width: 35px;
+        margin-left: auto;
       }
 
       /* Landing */
       .boston {
-        padding-top: 100px;
+        /*padding-top: 100px;*/
       }
 
       /* About Section */
