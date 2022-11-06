@@ -2,13 +2,18 @@
 import Bubbles from "../components/Bubbles.astro";
 ---
 
-<div class="section">
-  <h1>Boston Brewing Co.</h1>
+<section>
+  <h1>
+    <span class="left">Boston</span>
+    <span class="middle">Brewing</span>
+    <span class="right">Co.</span>
+  </h1>
   <img class="black-can" src="images/BostonBlack.png" />
   <img class="pink-can" src="images/BostonAfterglosse.png" />
   <img class="blue-can" src="images/BostonPeaceful.png" />
   <img class="arrow-down" src="images/ArrowDown.svg" />
-</div>
+</section>
+<Bubbles />
 
 <style>
   h1 {
@@ -18,14 +23,35 @@ import Bubbles from "../components/Bubbles.astro";
     left: 50%;
     transform: translate(-50%, -50%);
 
-    font-size: 80px;
-    color: #c8f0e4;
+    width: 7.5ch;
+    font-size: 75px;
+    color: #e49472;
+    -webkit-text-stroke: 1px #c8f0e4;
   }
 
-  .section {
+  h1 span {
+    display: block;
+  }
+
+  h1 .middle {
+    color: #c8f0e4;
+    text-align: center;
+  }
+
+  h1 .left {
+    text-align: left;
+  }
+
+  h1 .right {
+    text-align: right;
+  }
+
+  section {
     height: 100vh;
     position: relative;
     overflow: hidden;
+
+    scroll-snap-align: center;
   }
 
   .black-can {
@@ -72,5 +98,3 @@ import Bubbles from "../components/Bubbles.astro";
     transform: translate(-55%, -5%);
   }
 </style>
-
-<Bubbles />
