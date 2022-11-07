@@ -2,10 +2,14 @@
 <section>
   <div class="locations section">
     <h2>Locations</h2>
-    <img src="images/BostonDenmark.webp" class="denmark" />
-    <h3>Denmark</h3>
-    <img src="images/BostonVic.jpeg" class="vicpark" />
-    <h3>Victoria Park</h3>
+    <div class="denmark-top">
+      <img src="images/boston-denmark.png" class="denmark" />
+      <h3 class="denmark-title">Denmark</h3>
+    </div>
+    <div class="vicpark-bottom">
+      <img src="images/boston-vicpark.png" class="vicpark" />
+      <h3 class="vicpark-title">Victoria Park</h3>
+    </div>
   </div>
 </section>
 
@@ -17,11 +21,16 @@
 
     scroll-snap-align: center;
   }
-  .denmark {
-    width: 300px;
-  }
 
-  .vicpark {
-    width: 300px;
+  h2 {
+    margin: 0;
+    top: 140px;
+
+    width: 7.5ch;
+    font-size: 75px;
+    color: #e49472;
+    -webkit-text-stroke: 1px #c8f0e4;
+
+    text-align: center;
   }
 </style>
