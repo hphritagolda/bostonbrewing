@@ -1,144 +1,102 @@
 ---
 import Landing from "../components/Landing.astro";
+import About from "../components/About.astro";
+import Special from "../components/Special.astro";
+import Process from "../components/Process.astro";
+import Locations from "../components/Locations.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+<!-- Section Component Imports Established Above -->
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
 
-    <title>Boston Brewing Co.</title>
+  <title>Boston Brewing Co.</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css"
-    />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css"
+  />
 
-    <link rel="stylesheet" href="https://use.typekit.net/gbw2iav.css" />
-  </head>
+  <link rel="stylesheet" href="https://use.typekit.net/gbw2iav.css" />
+</head>
 
-  <body>
-    <!-- Navigation Header -->
-    <header class="tophead">
-      <img src="images/BostonLogo.png" class="logo" />
-      <img src="images/Menu.svg" class="menu" />
-    </header>
+<body>
+  <!-- Navigation Header -->
+  <header class="tophead">
+    <img src="images/BostonLogo.png" class="logo" />
+    <img src="images/Menu.svg" class="menu" />
+  </header>
 
-    <main>
-      <!-- Landing Hero Section -->
-      <Landing />
-      <!-- Done as component under landing -->
+  <main>
+    <!-- Landing Hero Section -->
+    <Landing />
 
-      <!-- About Us Section -->
-      <div class="about section">
-        <h2>About Us</h2>
-        <img src="images/BostonBlack.png" />
-      </div>
+    <!-- About Us Section -->
+    <About />
 
-      <!-- Season's Special Section-->
-      <div class="special section">
-        <h2>Season's Special</h2>
-        <img src="images/BostonSummer.png" />
-      </div>
+    <!-- Season's Special Section-->
+    <Special />
 
-      <!-- Our Process -->
-      <div class="process section">
-        <h2>Our Process</h2>
-        <img src="images/BostonBlack.png" />
-      </div>
+    <!-- Our Process -->
+    <Process />
 
-      <!-- Locations -->
-      <div class="locations section">
-        <h2>Locations</h2>
-        <img src="images/BostonDenmark.webp" class="denmark" />
-        <h3>Denmark</h3>
-        <img src="images/BostonVic.jpeg" class="vicpark" />
-        <h3>Victoria Park</h3>
-      </div>
-    </main>
+    <!-- Locations -->
+    <Locations />
+  </main>
 
-    <style>
-      body {
-        background-color: #e49472;
-        font-family: articulat-heavy-cf, sans-serif;
-        font-weight: 900;
-        font-style: normal;
-        margin: 0;
-      }
+  <style>
+    body {
+      background-color: #e49472;
+      font-family: articulat-heavy-cf, sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      margin: 0;
+    }
 
-      h1,
-      h2,
-      h3 {
-        margin: 0;
-      }
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+    }
 
-      main {
-        scroll-snap-type: y proximity;
-        height: 100vh;
-        overflow-y: scroll;
-      }
+    main {
+      scroll-snap-type: y proximity;
+      height: 100vh;
+      overflow-y: scroll;
+    }
 
-      .section {
-        height: 100vh;
-        width: 100%;
+    .section {
+      height: 100vh;
+      width: 100%;
 
-        scroll-snap-align: start;
-      }
+      scroll-snap-align: start;
+    }
 
-      /* Top Header Section */
+    /* Top Header Section */
 
-      .tophead {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 16px 16px;
-        z-index: 50;
+    .tophead {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 16px;
+      z-index: 50;
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-      }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
 
-      .logo {
-        width: 90px;
-      }
+    .logo {
+      width: 90px;
+    }
 
-      .menu {
-        width: 35px;
-        margin-left: auto;
-      }
-
-      /* Landing */
-      .boston {
-        /*padding-top: 100px;*/
-      }
-
-      /* About Section */
-
-      .about {
-        background-color: #c84f6c;
-      }
-
-      .special {
-        background-color: #c8f0e4;
-      }
-
-      .process {
-        background-color: #e35d41;
-      }
-
-      /* Location Section */
-
-      .denmark {
-        width: 300px;
-      }
-
-      .vicpark {
-        width: 300px;
-      }
-    </style>
-  </body>
-</html>
+    .menu {
+      width: 35px;
+      margin-left: auto;
+    }
+  </style>
+</body>
