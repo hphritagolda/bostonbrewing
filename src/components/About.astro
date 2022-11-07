@@ -1,5 +1,9 @@
+---
+import Container from "./Container.astro";
+---
+
 <!-- About Section -->
-<section>
+<Container backgroundColour="#C84F6C" bubbleColour="#C8F0E4">
   <div class="about-us">
     <h2>
       <span class="top">About</span>
@@ -18,18 +22,9 @@
     id eleifend arcu vehicula.
   </p>
   <img class="second-scroll" src="images/second-scroll.svg" />
-</section>
+</Container>
 
 <style>
-  section {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: #c84f6c;
-
-    scroll-snap-align: center;
-  }
-
   h2 {
     margin: 0;
 

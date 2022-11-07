@@ -2,11 +2,9 @@
 <section>
   <div class="locations section">
     <h2>Locations</h2>
-    <div class="denmark-top">
+    <div class="two-locations">
       <img src="images/boston-denmark.png" class="denmark" />
       <h3 class="denmark-title">Denmark</h3>
-    </div>
-    <div class="vicpark-bottom">
       <img src="images/boston-vicpark.png" class="vicpark" />
       <h3 class="vicpark-title">Victoria Park</h3>
     </div>
@@ -19,7 +17,7 @@
     position: relative;
     overflow: hidden;
 
-    scroll-snap-align: center;
+    scroll-snap-align: start;
   }
 
   h2 {
@@ -32,5 +30,25 @@
     -webkit-text-stroke: 1px #c8f0e4;
 
     text-align: center;
+  }
+
+  .denmark {
+    position: absolute;
+    height: 250px;
+    width: auto;
+    margin: 0;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .vicpark {
+    position: absolute;
+    height: 250px;
+    width: auto;
+    margin: 0;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 </style>

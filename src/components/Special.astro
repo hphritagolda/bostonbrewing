@@ -1,5 +1,9 @@
+---
+import Container from "./Container.astro";
+---
+
 <!-- Season's Special Section -->
-<section>
+<Container backgroundColour="#C8F0E4" bubbleColour="#265816">
   <h2>
     <span class="top">Season's</span>
     <span class="bottom">Special</span>
@@ -7,18 +11,9 @@
   <img class="summer" src="images/BostonSummer.png" />
   <img class="left" src="images/arrow-left.svg" />
   <img class="right" src="images/arrow-right.svg" />
-</section>
+</Container>
 
 <style>
-  section {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: #c8f0e4;
-
-    scroll-snap-align: center;
-  }
-
   h2 {
     margin: 0;
 

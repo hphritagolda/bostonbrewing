@@ -1,9 +1,9 @@
 ---
-import Bubbles from "../components/Bubbles.astro";
+import Container from "./Container.astro";
 ---
 
 <!-- Landing Component -->
-<section>
+<Container backgroundColour="#e49472" bubbleColour="#C8F0E4">
   <h1>
     <span class="left">Boston</span>
     <span class="middle">Brewing</span>
@@ -14,8 +14,7 @@ import Bubbles from "../components/Bubbles.astro";
   <img class="blue-can" src="images/BostonPeaceful.png" />
   <img class="arrow-down" src="images/ArrowDown.svg" />
   <img class="first-scroll" src="images/first-scroll.svg" />
-</section>
-<Bubbles />
+</Container>
 
 <style>
   h1 {
@@ -46,14 +45,6 @@ import Bubbles from "../components/Bubbles.astro";
 
   h1 .right {
     text-align: right;
-  }
-
-  section {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-
-    scroll-snap-align: center;
   }
 
   .black-can {
