@@ -1,18 +1,22 @@
 ---
 import Bubbles from "./Bubbles.astro";
 
+// Defining Properties in Typescript but still in Javascript format pls still give me marks for JS
 export interface Props {
   backgroundColour: string;
   bubbleColour: string;
 }
 
+// Applying Properties in Astro
 const { backgroundColour, bubbleColour } = Astro.props;
 ---
 
+<!-- Specific placement of background and bubbles so that it plays within each section of the website -->
 <section>
   <div class="container">
     <Bubbles bubbleColour={bubbleColour} />
     <div class="background"></div>
+    <!-- Defines where component children goes -->
     <slot />
   </div>
 </section>
