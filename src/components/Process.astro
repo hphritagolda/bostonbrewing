@@ -1,8 +1,15 @@
 <!-- Process Section -->
 <section>
   <div class="process section">
-    <h2>Our Process</h2>
-    <img src="images/BostonBlack.png" />
+    <h2>
+      <span class="top">Our</span>
+      <span class="bottom">Process</span>
+    </h2>
+    <img class="black-can" src="images/BostonBlack.png" />
+    <img class="wheat" src="images/wheat.svg" />
+    <img class="lemon" src="images/lemon.svg" />
+    <img class="barrels" src="images/barrels.svg" />
+    <img class="beer" src="images/beer.svg" />
   </div>
 </section>
 
@@ -14,5 +21,30 @@
     background: #e35d41;
 
     scroll-snap-align: center;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-size: 75px;
+    color: #e35d41;
+    -webkit-text-stroke: 1px #c8f0e4;
+
+    text-align: center;
+  }
+
+  h2 .bottom {
+    color: #c8f0e4;
+  }
+
+  .black-can {
+    position: absolute;
+    height: 350px;
+    width: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 </style>

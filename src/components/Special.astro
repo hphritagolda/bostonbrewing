@@ -1,9 +1,12 @@
 <!-- Season's Special Section -->
 <section>
-  <div class="special section">
-    <h2>Season's Special</h2>
-    <img src="images/BostonSummer.png" />
-  </div>
+  <h2>
+    <span class="top">Season's</span>
+    <span class="bottom">Special</span>
+  </h2>
+  <img class="summer" src="images/BostonSummer.png" />
+  <img class="left" src="images/arrow-left.svg" />
+  <img class="right" src="images/arrow-right.svg" />
 </section>
 
 <style>
@@ -14,5 +17,50 @@
     background: #c8f0e4;
 
     scroll-snap-align: center;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-size: 75px;
+    color: #c8f0e4;
+    -webkit-text-stroke: 1px #265816;
+
+    text-align: center;
+  }
+
+  h2 .bottom {
+    color: #265816;
+  }
+
+  .summer {
+    position: absolute;
+    height: 500px;
+    width: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .left {
+    position: absolute;
+    margin: 0;
+    height: 40px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+
+  .right {
+    position: absolute;
+    margin: 0;
+    height: 40px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 10%;
   }
 </style>
