@@ -21,6 +21,13 @@ import Container from "./Container.astro";
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
   }
 
   h2 {
@@ -38,13 +45,15 @@ import Container from "./Container.astro";
   }
 
   .black-can {
-    height: 300px;
+    height: 250px;
     width: auto;
     margin: 0;
   }
 
-  .wheat .lemon {
-    width: auto;
-    margin: 0;
+  .wheat,
+  .lemon,
+  .barrels,
+  .beer {
+    height: 70px;
   }
 </style>

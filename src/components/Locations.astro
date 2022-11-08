@@ -1,54 +1,55 @@
+---
+import Container from "./Container.astro";
+---
+
 <!-- Location Section -->
-<section>
-  <div class="locations section">
-    <h2>Locations</h2>
-    <div class="two-locations">
-      <img src="images/boston-denmark.png" class="denmark" />
-      <h3 class="denmark-title">Denmark</h3>
-      <img src="images/boston-vicpark.png" class="vicpark" />
-      <h3 class="vicpark-title">Victoria Park</h3>
-    </div>
+<Container backgroundColour="#e49472" bubbleColour="#C8F0E4">
+  <div class="locations">
+    <h2 class="top">locations</h2>
+    <img class="denmark" src="images/boston-denmark.png" />
+    <h3 class="denmark-title">Denmark</h3>
+    <img class="vicpark" src="images/boston-vicpark.png" />
+    <h3 class="vicpark-title">Victoria Park</h3>
   </div>
-</section>
 
-<style>
-  section {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+  <style>
+    .locations {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-    scroll-snap-align: start;
-  }
+    h2 {
+      margin: 0;
+      top: 140px;
 
-  h2 {
-    margin: 0;
-    top: 140px;
+      width: 7.5ch;
+      font-size: 75px;
+      color: #e49472;
+      -webkit-text-stroke: 1px #c8f0e4;
 
-    width: 7.5ch;
-    font-size: 75px;
-    color: #e49472;
-    -webkit-text-stroke: 1px #c8f0e4;
+      text-align: center;
+    }
 
-    text-align: center;
-  }
+    .denmark {
+      position: absolute;
+      height: 250px;
+      width: auto;
+      margin: 0;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-  .denmark {
-    position: absolute;
-    height: 250px;
-    width: auto;
-    margin: 0;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .vicpark {
-    position: absolute;
-    height: 250px;
-    width: auto;
-    margin: 0;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-</style>
+    .vicpark {
+      position: absolute;
+      height: 250px;
+      width: auto;
+      margin: 0;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</Container>
