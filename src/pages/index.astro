@@ -4,6 +4,7 @@ import About from "../components/About.astro";
 import Special from "../components/Special.astro";
 import Process from "../components/Process.astro";
 import Locations from "../components/Locations.astro";
+import Newsletter from "../components/Newsletter.astro";
 ---
 
 <!-- Section Component Imports Established Above -->
@@ -21,6 +22,11 @@ import Locations from "../components/Locations.astro";
   />
 
   <link rel="stylesheet" href="https://use.typekit.net/gbw2iav.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/light.css"
+  />
 </head>
 
 <body>
@@ -45,6 +51,9 @@ import Locations from "../components/Locations.astro";
 
     <!-- Locations -->
     <Locations />
+
+    <!-- Get In Touch -->
+    <Newsletter />
   </main>
 
   <style>
@@ -86,4 +95,9 @@ import Locations from "../components/Locations.astro";
       margin-left: auto;
     }
   </style>
+
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/shoelace.js"
+  ></script>
 </body>
