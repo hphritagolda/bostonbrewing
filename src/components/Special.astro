@@ -7,6 +7,10 @@ import Container from "./Container.astro";
   <div class="season-special">
     <h2 class="top">Season's</h2>
     <img class="summer-can" src="images/summer-night.svg" />
+    <h3>Tasting Notes</h3>
+    <sl-tag variant="success" size="large" pill>Mint</sl-tag>
+    <sl-tag variant="primary" size="large" pill>Blueberry</sl-tag>
+    <sl-tag variant="warning" size="large" pill>Lemons</sl-tag>
     <h2 class="bottom">Special</h2>
   </div>
   <img class="left" src="images/arrow-left.svg" />
@@ -23,7 +27,7 @@ import Container from "./Container.astro";
   }
 
   h2 {
-    margin: 0;
+    margin: 10px;
 
     font-size: 75px;
     color: #c8f0e4;
@@ -36,10 +40,18 @@ import Container from "./Container.astro";
     color: #265816;
   }
 
-  .summer {
-    position: absolute;
-    height: 500px;
-    width: auto;
+  h3 {
+    margin: 10px;
+    font-size: 30px;
+    color: #265816;
+    font-family: articulat-cf, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .summer-can {
+    width: 300px;
+    height: auto;
   }
 
   .left {
@@ -48,7 +60,7 @@ import Container from "./Container.astro";
     height: 40px;
     width: auto;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 10%;
   }
 
@@ -58,7 +70,7 @@ import Container from "./Container.astro";
     height: 40px;
     width: auto;
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 10%;
   }
 </style>
