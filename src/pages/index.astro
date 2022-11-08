@@ -8,105 +8,107 @@ import Newsletter from "../components/Newsletter.astro";
 import Carousel from "../components/Carousel.astro";
 ---
 
-<!-- Section Component Imports Established Above -->
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
+<html lang="en">
+  <!-- Section Component Imports Established Above -->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-  <title>Boston Brewing Co.</title>
+    <title>Boston Brewing Co.</title>
 
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css"
-  />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css"
+    />
 
-  <link rel="stylesheet" href="https://use.typekit.net/gbw2iav.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/gbw2iav.css" />
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/light.css"
-  />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/light.css"
+    />
+  </head>
 
-<body>
-  <!-- Navigation Header -->
-  <header class="tophead">
-    <img src="images/BostonLogo.png" class="logo" />
+  <body>
+    <!-- Navigation Header -->
+    <header class="tophead">
+      <img src="images/BostonLogo.png" class="logo" />
 
-    <sl-icon class="menu" name="list" /><sl-icon />
-  </header>
+      <sl-icon class="menu" name="list" /><sl-icon />
+    </header>
 
-  <main>
-    <!-- Landing Hero Section -->
-    <Landing />
+    <main>
+      <!-- Landing Hero Section -->
+      <Landing />
 
-    <!-- About Us Section -->
-    <About />
+      <!-- About Us Section -->
+      <About />
 
-    <!-- Season's Special Section-->
-    <Special />
+      <!-- Season's Special Section-->
+      <Special />
 
-    <!-- Our Process -->
-    <Process />
+      <!-- Our Process -->
+      <Process />
 
-    <!-- Locations -->
-    <Locations />
+      <!-- Locations -->
+      <Locations />
 
-    <!-- Get In Touch -->
-    <Newsletter />
+      <!-- Get In Touch -->
+      <Newsletter />
 
-    <!-- Experiment -->
-    <Carousel />
-  </main>
+      <!-- Experiment -->
+      <Carousel />
+    </main>
 
-  <style>
-    body {
-      background-color: #e49472;
-      font-family: articulat-heavy-cf, sans-serif;
-      font-weight: 900;
-      font-style: normal;
-      margin: 0;
-    }
+    <style>
+      body {
+        background-color: #e49472;
+        font-family: articulat-heavy-cf, sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        margin: 0;
+      }
 
-    main {
-      scroll-snap-type: y proximity;
-      height: 100vh;
-      overflow-y: scroll;
-    }
+      main {
+        scroll-snap-type: y proximity;
+        height: 100vh;
+        overflow-y: scroll;
+      }
 
-    /* Top Header Section */
+      /* Top Header Section */
 
-    .tophead {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding: 16px 16px;
-      z-index: 50;
+      .tophead {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 16px 16px;
+        z-index: 50;
 
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-    }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
 
-    .logo {
-      width: 90px;
-    }
+      .logo {
+        width: 90px;
+      }
 
-    .menu {
-      margin-left: auto;
+      .menu {
+        margin-left: auto;
 
-      font-size: 50px;
+        font-size: 50px;
 
-      color: #ffff;
-    }
-  </style>
+        color: #ffff;
+      }
+    </style>
 
-  <script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/shoelace.js"
-  ></script>
-</body>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/shoelace.js"
+    ></script>
+  </body>
+</html>
