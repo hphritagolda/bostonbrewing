@@ -74,7 +74,8 @@ import Carousel from "../components/Carousel.astro";
       main {
         scroll-snap-type: y proximity;
         height: 100vh;
-        overflow-y: scroll;
+        overflow-y: auto;
+        scroll-behavior: smooth;
       }
 
       /* Top Header Section */
@@ -85,7 +86,8 @@ import Carousel from "../components/Carousel.astro";
         left: 0;
         right: 0;
         padding: 16px 16px;
-        z-index: 50;
+        pointer-events: none;
+        z-index: 10;
 
         display: flex;
         flex-direction: row;
