@@ -4,20 +4,25 @@ import Container from "./Container.astro";
 
 <!-- Process Section -->
 <Container backgroundColour="#E35D41" bubbleColour="#C8F0E4">
-  <div class="process section">
-    <h2>
-      <span class="top">Our</span>
-      <span class="bottom">Process</span>
-    </h2>
-    <img class="black-can" src="images/BostonBlack.png" />
+  <div class="process">
+    <h2 class="top">Our</h2>
     <img class="wheat" src="images/wheat.svg" />
     <img class="lemon" src="images/lemon.svg" />
+    <img class="black-can" src="images/BostonBlack.png" />
     <img class="barrels" src="images/barrels.svg" />
     <img class="beer" src="images/beer.svg" />
+    <h2 class="bottom">Process</h2>
   </div>
 </Container>
 
 <style>
+  .process {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   h2 {
     margin: 0;
 
@@ -28,18 +33,18 @@ import Container from "./Container.astro";
     text-align: center;
   }
 
-  h2 .bottom {
+  h2.bottom {
     color: #c8f0e4;
   }
 
   .black-can {
-    position: absolute;
-    height: 350px;
+    height: 300px;
     width: auto;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  }
+
+  .wheat .lemon {
+    width: auto;
+    margin: 0;
   }
 </style>

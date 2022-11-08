@@ -4,16 +4,23 @@ import Container from "./Container.astro";
 
 <!-- Season's Special Section -->
 <Container backgroundColour="#C8F0E4" bubbleColour="#265816">
-  <h2>
-    <span class="top">Season's</span>
-    <span class="bottom">Special</span>
-  </h2>
-  <img class="summer" src="images/BostonSummer.png" />
+  <div class="season-special">
+    <h2 class="top">Season's</h2>
+    <img class="summer-can" src="images/summer-night.svg" />
+    <h2 class="bottom">Special</h2>
+  </div>
   <img class="left" src="images/arrow-left.svg" />
   <img class="right" src="images/arrow-right.svg" />
 </Container>
 
 <style>
+  .season-special {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   h2 {
     margin: 0;
 
@@ -24,7 +31,7 @@ import Container from "./Container.astro";
     text-align: center;
   }
 
-  h2 .bottom {
+  h2.bottom {
     color: #265816;
   }
 
@@ -32,11 +39,6 @@ import Container from "./Container.astro";
     position: absolute;
     height: 500px;
     width: auto;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .left {
