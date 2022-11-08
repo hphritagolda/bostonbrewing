@@ -5,14 +5,15 @@ import Bubbles from "./Bubbles.astro";
 export interface Props {
   backgroundColour: string;
   bubbleColour: string;
+  id?: string;
 }
 
 // Applying Properties in Astro
-const { backgroundColour, bubbleColour } = Astro.props;
+const { backgroundColour, bubbleColour, id } = Astro.props;
 ---
 
 <!-- Specific placement of background and bubbles so that it plays within each section of the website -->
-<section>
+<section id={id}>
   <div class="container">
     <Bubbles bubbleColour={bubbleColour} />
     <div class="background"></div>
