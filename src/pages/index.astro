@@ -33,7 +33,10 @@ import Newsletter from "../components/Newsletter.astro";
   <!-- Navigation Header -->
   <header class="tophead">
     <img src="images/BostonLogo.png" class="logo" />
-    <img src="images/Menu.svg" class="menu" />
+    <div style="font-size: 50px;">
+      <sl-icon class="menu" name="list" /><sl-icon />
+    </div>
+    <!-- <img src="images/Menu.svg" class="menu" /> -->
   </header>
 
   <main>
@@ -91,8 +94,9 @@ import Newsletter from "../components/Newsletter.astro";
     }
 
     .menu {
-      width: 35px;
       margin-left: auto;
+
+      color: #ffff;
     }
   </style>
 

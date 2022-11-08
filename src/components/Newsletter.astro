@@ -6,8 +6,39 @@ import Qrcode from "./Qrcode.astro";
 <!-- Newsletter Section -->
 <Container backgroundColour="#e49472" bubbleColour="#C8F0E4">
   <div class="newsletter">
-    <h2 class="top">Our</h2>
-    <Qrcode />
-    <h2 class="bottom">Newsletter</h2>
+    <h2 class="top">Keep</h2>
+    <Qrcode class="code" />
+    <h2 class="bottom">Updated</h2>
   </div>
 </Container>
+
+<style>
+  .newsletter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 30px;
+  }
+
+  h2 {
+    margin: 0;
+    top: 140px;
+
+    width: 7.5ch;
+    font-size: 90px;
+    color: #e49472;
+    -webkit-text-stroke: 1px #c8f0e4;
+
+    text-align: center;
+  }
+
+  h2.bottom {
+    color: #c8f0e4;
+  }
+</style>
