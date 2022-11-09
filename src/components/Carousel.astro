@@ -28,7 +28,6 @@ import Container from "./Container.astro";
 </Container>
 
 <style>
-  /* Slideshow container */
   .carousel-container {
     height: 100%;
     max-width: 1000px;
@@ -36,12 +35,10 @@ import Container from "./Container.astro";
     margin: auto;
   }
 
-  /* Hide the images by default */
   .myCarousel {
     display: none;
   }
 
-  /* Next & previous buttons */
   .prev,
   .next {
     cursor: pointer;
@@ -58,19 +55,16 @@ import Container from "./Container.astro";
     user-select: none;
   }
 
-  /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
 
-  /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-  /* Caption text */
   .text {
     color: #f2f2f2;
     font-size: 15px;
@@ -81,7 +75,6 @@ import Container from "./Container.astro";
     text-align: center;
   }
 
-  /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -109,7 +102,6 @@ import Container from "./Container.astro";
   let slideIndex = 1;
   showSlides(slideIndex);
 
-  // Next/previous controls
   function plusSlides(n: number) {
     showSlides((slideIndex += n));
   }
@@ -121,7 +113,6 @@ import Container from "./Container.astro";
     .getElementById("next")
     ?.addEventListener("click", () => plusSlides(1));
 
-  // Thumbnail image controls
   function currentSlide(n: number) {
     showSlides((slideIndex = n));
   }
@@ -129,7 +120,6 @@ import Container from "./Container.astro";
   function showSlides(n: number) {
     let i;
     let slides = document.getElementsByClassName("myCarousel");
-    // let dots = document.getElementsByClassName("dot");
     if (n > slides.length) {
       slideIndex = 1;
     }
@@ -139,10 +129,7 @@ import Container from "./Container.astro";
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-    // for (i = 0; i < dots.length; i++) {
-    //   dots[i].className = dots[i].className.replace(" active", "");
-    // }
+
     slides[slideIndex - 1].style.display = "block";
-    // dots[slideIndex - 1].className += " active";
   }
 </script>
