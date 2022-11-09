@@ -1,0 +1,64 @@
+<!-- Animated Arrow Down SVG 
+Unused CSS. n.d. "Animated Scroll Down Arrow." Accessed On: 9 November, 2022. https://unused-css.com/blog/animated-down-arrow/ 
+Vuesax. n.d. "Vuesax + UIX Icons Set." Accessed On: 6 November, 2022. https://iconsax.io/-->
+<div class="arrow-up">
+  <svg
+    width="39"
+    height="40"
+    viewBox="0 0 39 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19.5 3.4375L19.5 30.25"
+      stroke="white"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"></path>
+    <path
+      d="M19.5 3.4375L9.15856 13.7789"
+      stroke="white"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"></path>
+    <path
+      d="M19.5 3.4375L29.8414 13.7789"
+      stroke="white"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"></path>
+  </svg>
+</div>
+
+<style>
+  .arrow-up {
+    position: absolute;
+    top: calc(100vh - 80px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    animation: jumpInfinite 1.5s infinite;
+  }
+
+  .arrow-up:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    transform: rotateZ(45deg);
+  }
+
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+</style>
