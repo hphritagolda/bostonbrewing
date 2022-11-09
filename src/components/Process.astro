@@ -1,9 +1,10 @@
 ---
 import Container from "./Container.astro";
+import Down from "./Down.astro";
 ---
 
 <!-- Process Section -->
-<Container backgroundColour="#E35D41" bubbleColour="#C8F0E4">
+<Container backgroundColour="#E35D41" bubbleColour="#C8F0E4" id="process">
   <div class="process">
     <h2 class="top">Our</h2>
     <img class="wheat" src="images/wheat.svg" />
@@ -13,6 +14,10 @@ import Container from "./Container.astro";
     <img class="beer" src="images/beer.svg" />
     <h2 class="bottom">Process</h2>
   </div>
+
+  <a href="#locations">
+    <Down />
+  </a>
 </Container>
 
 <style>

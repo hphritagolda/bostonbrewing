@@ -1,15 +1,19 @@
 ---
 import Container from "./Container.astro";
 import Qrcode from "./Qrcode.astro";
+import Up from "./Up.astro";
 ---
 
 <!-- Newsletter Section -->
-<Container backgroundColour="#e49472" bubbleColour="#C8F0E4">
+<Container backgroundColour="#e49472" bubbleColour="#C8F0E4" id="newsletter">
   <div class="newsletter">
     <h2 class="top">Keep</h2>
     <Qrcode class="code" />
     <h2 class="bottom">Updated</h2>
   </div>
+  <a href="#landing">
+    <Up />
+  </a>
 </Container>
 
 <style>

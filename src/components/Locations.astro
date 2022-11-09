@@ -1,9 +1,10 @@
 ---
 import Container from "./Container.astro";
+import Down from "./Down.astro";
 ---
 
 <!-- Location Section -->
-<Container backgroundColour="#164307" bubbleColour="#C8F0E4">
+<Container backgroundColour="#164307" bubbleColour="#C8F0E4" id="locations">
   <div class="locations">
     <h2 class="top">Our</h2>
     <img class="denmark" src="images/boston-denmark.png" />
@@ -12,6 +13,10 @@ import Container from "./Container.astro";
     <h3 class="vicpark-title">Victoria Park</h3>
     <h2 class="bottom">Locations</h2>
   </div>
+
+  <a href="#newsletter">
+    <Down />
+  </a>
 
   <style>
     .locations {
