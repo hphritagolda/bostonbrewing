@@ -97,6 +97,8 @@ import Down from "./Down.astro";
   }
 
   .can-container {
+    /* Use grid to avoid elements crashing into eachother */
+    /* Learned it here https://twitter.com/stolinski/status/1589708568886128641 */
     display: grid;
     justify-content: center;
   }
@@ -179,6 +181,10 @@ import Down from "./Down.astro";
     color: #265816;
   }
 
+  .strawberry:hover::part(base) {
+    background-color: #26581633;
+  }
+
   .summer::part(base) {
     background-color: #c8f0e4;
     border-color: #41139e;
@@ -186,11 +192,19 @@ import Down from "./Down.astro";
     color: #41139e;
   }
 
+  .summer:hover::part(base) {
+    background-color: #41139e33;
+  }
+
   .southern::part(base) {
     background-color: #c8f0e4;
     border-color: #c58500;
     border-width: 2px;
     color: #c58500;
+  }
+
+  .southern:hover::part(base) {
+    background-color: #c5850033;
   }
 
   @media only screen and (min-width: 992px) {
