@@ -7,24 +7,62 @@ import Down from "./Down.astro";
 <Container backgroundColour="#C8F0E4" bubbleColour="#265816" id="special">
   <div class="season-special">
     <h2 class="top">Season's</h2>
-    <img class="summer-can" src="images/summer-night.svg" />
+    <div class="can-container">
+      <img class="can fade-in" id="summer-can" src="images/summer-night.svg" />
+      <img
+        class="can fade-out"
+        id="strawberry-can"
+        src="images/strawberry-can.svg"
+      />
+      <img
+        class="can fade-out"
+        id="southern-can"
+        src="images/southern-can.svg"
+      />
+    </div>
     <h3>Tasting Notes</h3>
     <div class="pill-container">
       <!-- Shoelace. n.d. "Tag." Accessed on: 8 November, 2022. https://shoelace.style/components/tag -->
-      <sl-tag class="blueberry" variant="primary" size="large" pill
-        >Blueberry</sl-tag
-      >
-      <sl-tag class="mint" variant="success" size="large" pill>Mint</sl-tag>
-      <sl-tag class="lemon" variant="warning" size="large" pill>Lemons</sl-tag>
+      <sl-tag class="summer" id="summer" size="large" pill>Summer</sl-tag>
+      <sl-tag class="strawberry" id="strawberry" size="large" pill>
+        Strawberry
+      </sl-tag>
+      <sl-tag class="southern" id="southern" size="large" pill>Southern</sl-tag>
     </div>
     <h2 class="bottom">Special</h2>
   </div>
-  <img class="left" src="images/arrow-left.svg" />
-  <img class="right" src="images/arrow-right.svg" />
   <a href="#process">
     <Down />
   </a>
 </Container>
+
+<script>
+  const cans = document.getElementsByClassName("can");
+
+  function fade(element: HTMLElement) {
+    for (const can of cans) {
+      can.classList.remove("fade-in");
+      can.classList.add("fade-out");
+    }
+
+    element.classList.add("fade-in");
+    element.classList.remove("fade-out");
+  }
+
+  const summerCan = document.getElementById("summer-can");
+  const strawberryCan = document.getElementById("strawberry-can");
+  const southernCan = document.getElementById("southern-can");
+
+  document
+    .getElementById("summer")
+    ?.addEventListener("click", () => fade(summerCan!));
+  document
+    .getElementById("strawberry")
+    ?.addEventListener("click", () => fade(strawberryCan!));
+  document
+    .getElementById("southern")
+    ?.addEventListener("click", () => fade(southernCan!));
+</script>
 
 <style>
   .season-special {
@@ -58,9 +96,52 @@ import Down from "./Down.astro";
     font-style: normal;
   }
 
-  .summer-can {
+  .can-container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .fade-in {
+    animation-name: fade-in;
+    animation-duration: 1s;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .fade-out {
+    animation-name: fade-out;
+    animation-duration: 1s;
+    opacity: 0;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      translate: 0 32px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      translate: 0 0;
+    }
+    to {
+      opacity: 0;
+      translate: 0 -32px;
+    }
+  }
+
+  .can {
     width: 300px;
     height: auto;
+
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
   }
 
   .left {
@@ -91,21 +172,21 @@ import Down from "./Down.astro";
     justify-content: center;
   }
 
-  .mint::part(base) {
+  .strawberry::part(base) {
     background-color: #c8f0e4;
     border-color: #265816;
     border-width: 2px;
     color: #265816;
   }
 
-  .blueberry::part(base) {
+  .summer::part(base) {
     background-color: #c8f0e4;
     border-color: #41139e;
     border-width: 2px;
     color: #41139e;
   }
 
-  .lemon::part(base) {
+  .southern::part(base) {
     background-color: #c8f0e4;
     border-color: #c58500;
     border-width: 2px;
